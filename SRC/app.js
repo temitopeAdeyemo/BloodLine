@@ -5,9 +5,9 @@ const env = require("dotenv");
 env.config();
 
 const PORT = process.env.PORT;
-
+// calling express.json since we will be posting and getting datas in json formats
 app.use(express.json())
-
+// An async function to call to connect to the database
 const connectDB = async ()=>{
     try {
         await mongoose.connect(process.env.DATA_URI)
@@ -19,10 +19,8 @@ const connectDB = async ()=>{
 connectDB()
 
 const sampleRoute = require('./router/sample.route')
-
+// creating a router path for app
 app.use('/api/v1',sampleRoute)
-
 app.listen(PORT, ()=>{
 console.log(`App is now listening to port ${PORT}`);
 })
-

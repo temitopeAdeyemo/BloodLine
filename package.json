@@ -7,9 +7,12 @@
     "dev": "nodemon ./SRC/app.js"
   },
   "dependencies": {
-    "dotenv": "^15.0.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
-    "mongoose": "^6.1.8",
+    "i": "^0.3.7",
+    "mongoose": "^6.2.1",
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": "https://github.com/temitopeAdeyemo/BloodLine.git",
+  "author": "temitopeAdeyemo <temitopejulius9@gmail.com>"
 }

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
+// creating a reminder schema 
 const sampleSchema = new Schema({
     firstName: {
         "type": String,
@@ -35,9 +35,9 @@ const sampleSchema = new Schema({
         default: Date.now(),
         immutable: true
     },
-});
-
+},
+{ timestamps: true });
+// creating a sample model for the schema
 const sampleModel = mongoose.model("sample", sampleSchema);
-
+// exporting the sample model to be used in other files when required
 module.exports = sampleModel;
-
